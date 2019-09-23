@@ -51,6 +51,8 @@ main() {
  */
 
 /* 
+
+//DYNAMIC
 //dynamic type her türlü değeri alır;
 main(){
   var deneme;
@@ -78,6 +80,8 @@ main(){
 }
  */
 
+/*
+//TYPE METHODLARI
 main(){
   String mesaj = 'Merhaba';
 
@@ -109,5 +113,131 @@ main(){
   //gitilen sayıdan büyük olmayan en yakın tam sayı değeri
   print(numb.floor());
 
+  double ondalik = 3.5;
+  print(ondalik.round()); //yuvarlama
+  
+  double ondalikSayi = 3.4; // .4 ve öncesi küçüğe yuvarlıyor
+  print(ondalikSayi.round());
+  print(ondalik.toInt()); //double sayının noktada nsonraki kısmını atarak integer yapar
+
+  print('ondalık değişkenin değeri: $ondalik');
+  print('ondalık değişkenin değeri: ' + ondalik.toString());
+
+  bool cevap = true;
+  print('cevap değeri: ' + cevap.toString());
+}
+*/
+
+/*
+//CONST VE FİNAL
+  main(List<String> args) {
+
+  final times = DateTime.now(); //bu satır çalışmaya başlayınca final komutundaki değer sabitlenir
+  print(times);
+  //const -> compile time da kullanılır
+  //Final -> run Time da kullanılır
+
+  const double pi = 3.14; //değer aynı ise yani yıllar yıllarda da böyle ise const kullanılır
+  const pi_num = 3.14;
+
+  final time = DateTime.now(); //önceki final ile şimdiki final farklı süreler veriyor ve sabitleniyor
+  //const ti = DateTime.now(); sabit olmadığı için çalışınca değişeceği için const olmaz
+  print("Zaman: $time");
 
 }
+ */
+
+/* 
+//ARİTMETİK OPERATÖRLER
+
+main(List<String> args) {
+  
+  var toplam = 4 + 5;
+  print(toplam);
+
+  var str = "merhaba ";
+  var str2 = 'nasılsın';
+
+  print(str + str2);
+  print(9 - - 1);
+  print(4 * 3);
+  print('kalan : ${10 / 3}');
+
+  print (10 ~/ 3); // Bölme işleminin virgülden önceki kısmını verir
+  print(10 % 3);
+  print('Kalan: ${10 % 3}');
+
+  print("kalan: " + ((10 + 3) * (20 ~/4 )).toString());
+}
+*/
+
+/* 
+//ATAMA OPERATÖRLERİ - =, +=, -=, *=, /=, ~/=, %=, ??=
+main(List<String> args) {
+  var n = 0;
+  print(n);
+  n += 2; // n = n + 2;
+  print(n);
+
+  var m = 3;
+  print("m: $m");
+  m -= 3;
+  print("m: $m");
+
+  var z = null;
+  z ??= 10;
+
+  print(z);
+
+}
+*/
+
+/* 
+//ARTTIRMA VE AZALTMA OPERATÖRLERİ
+main(List<String> args) {
+  var n = 0;
+  n++; //n = n + 1;
+  ++n;
+
+  print(n);
+
+  var a = 2;
+  var b = a++;
+
+  print('b değeri: $b');
+  print('a değeri: $a');
+  
+  var c = 2;
+  var d = ++c;
+
+  print('d değeri: $d');
+  print('c değeri: $c');
+}
+ */
+
+/* 
+//EŞİTLİK VE İLİŞKİSEL OPERATÖRLER ==, !=, >, <, >=, <=
+main(List<String> args) {
+  
+  print(5 == 2);
+
+  var sonuc = (5==2);
+  print(sonuc);
+
+  print(4 != 2);
+
+  print(5 > 2);
+}
+ */
+
+/* 
+//TYPE TEST OPERATÖRLERİ is, is!, as
+main(List<String> args) {
+  
+  int tamsayi = 10;
+  print(tamsayi is int);
+  print(100 is double);
+
+  print(tamsayi is! String);
+}
+ */
