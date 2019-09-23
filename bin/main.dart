@@ -13,5 +13,13 @@ main() {
 }
 */
 
-int sayi = 10
+main() {
+  int sayi = 10;
+  print(sayi);
 
+  //sayi = "Ali";
+  //sayi = 11.1;
+
+  sayi = 11;
+  double ondalik = 11;
+}
