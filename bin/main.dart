@@ -286,5 +286,10 @@ main(List<String> args) {
   ? print ("sayı değeri 1'den büyük...") : print("sayı değeri 1'den küçük"));
 
   var sonuc = (sayi > 1 ? "sayi değeri 1'den büyük..." : "sayi değeri 1'den küçük...");
-  print(sonuc); 
+  print(sonuc);
+
+  var degisken = null;
+  var newSoru = (degisken ?? 'Merhaba');
+  print(newSoru);
+  var soru = (null ?? 'Nasılsın?');
 }
