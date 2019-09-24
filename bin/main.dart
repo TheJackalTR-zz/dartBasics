@@ -241,3 +241,50 @@ main(List<String> args) {
   print(tamsayi is! String);
 }
  */
+
+/* 
+//MANTIKSAL OPERATÖRLER !, ||, 6&
+main(List<String> args) {
+  
+  bool deneme = false;
+  print(!deneme);
+
+  print((5 > 2) || (3 > 5)); // ||(veya) operatörü için yapılan iki tanımlamadan birinin doğru olması lazım
+
+  // && ve operatörü
+  print((8 > 1) && (5 > 2)); // True olmaası için iki tarafında true olması lazım diğer hepsi false
+}
+ */
+
+
+//IF - ELSE YAPISI
+main(List<String> args) {
+  
+  var sayi = 10;
+
+  if (sayi > 5) {
+    print('Sayı değişkeni 5\'ten büyüktür.');
+  } else {
+    print('Sayı 5\'ten büyüktür.');
+  }
+
+  var deneme = 9;
+  
+  if(deneme == 9) {
+    print("deneme değeri 9'a eşit");
+  }
+
+  if (deneme > 3) {
+    print("deneme değeri 3'ten büyük");
+  } else {
+    print("deneme değeri 3'ten küçük");
+  }
+
+  //ÖZEL KOŞULLU İFADE
+
+  (sayi > 1
+  ? print ("sayı değeri 1'den büyük...") : print("sayı değeri 1'den küçük"));
+
+  var sonuc = (sayi > 1 ? "sayi değeri 1'den büyük..." : "sayi değeri 1'den küçük...");
+  print(sonuc); 
+}
