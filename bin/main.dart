@@ -256,7 +256,7 @@ main(List<String> args) {
 }
  */
 
-
+/* 
 //IF - ELSE YAPISI
 main(List<String> args) {
   
@@ -293,3 +293,113 @@ main(List<String> args) {
   print(newSoru);
   var soru = (null ?? 'Nasılsın?');
 }
+ */
+
+/* 
+//SWITCH CASE
+main(List<String> args) {
+  
+  var bugun = 'Pazartesi';
+
+  switch (bugun) {
+    case 'Cumartesi':
+      print('Bugün dükkanımız kapalıdır');
+      break;
+
+    case 'Pazar':
+      print('Bugün dükkanımız kapalıdır, lütfen tarın geliniz...');
+      break;
+
+    default:
+      print('Bugün dükkanımız açıktır...');
+  }
+}
+ */
+
+/* 
+//ASSERT
+main(List<String> args) {
+
+  var sayi = 3;
+
+  print('kodlar ...1');
+  print('kodlar ...2');
+  print('kodlar ...3');
+  assert(sayi == 4); // uygulamayı durdurup hata mesajı üretir
+  print('kodlar ...4');
+  print('kodlar ...5');
+}
+ */
+
+/* 
+main(List<String> args) {
+
+  paket();
+
+  print(islem());  // değer dönen fonrkisyonların sonucu böyle döner
+
+  var sonuc = islem();
+  print(sonuc);
+}
+
+void paket() {
+  print('Merhaba..');
+  print('Nasılsınız');
+}
+
+islem(){
+
+  var sayi1 = 3;
+  var sayi2 = 5;
+
+  var carpma = sayi1 * sayi2;
+  return carpma;
+}
+ */
+
+/* 
+//Fonksiyon Parametreleri
+main(List<String> args) {
+
+  mesaj('Aryen', 'HEMVATAN', 23);
+
+  mesaj2('Aryen',null,23);
+
+  mesaj3("Aryen", yas: 24, soyisim: "Hemvatan");
+}
+
+mesaj(String isim, String soyisim, int yas) {
+
+  print("Sevgili $isim $soyisim, $yas. doğum gününüz kutlu olsun");
+}
+
+mesaj2(String isim, [String soyisim, int yas]) { //Köşeli parantez kullanılan parametreler kullanılmak zorunda değil
+  if (soyisim == null) {
+    print("sevgili $isim, $yas. doğum gününüz lutşu olsun");
+  } else {
+    print("Ben gidiyom abi");
+  }
+}
+
+mesaj3(String isim, {String soyisim, int yas}){ //Süsülü parantez ile beraber parametreler istenilen yerde kullanılabilir
+  if (soyisim == null) {
+    print("Sevgili $isim, $yas. doğum gününüz kutlu olsun");
+  } else {
+    print("Sevgili $isim $soyisim, $yas. doğum gününüz kutlu olsun"); 
+  }
+}
+*/
+
+
+//PRATİK FONKSİYON
+main(List<String> args) {
+  print(carpma(5, 4));
+  print(pratikCarpma(2, 3));
+}
+
+int carpma(int sayi1, int sayi2){
+  var sonuc = sayi1 * sayi2;
+  return sonuc;
+}
+
+int pratikCarpma(int sayi1, int sayi2) => sayi1 * sayi2;
