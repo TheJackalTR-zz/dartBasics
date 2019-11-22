@@ -390,7 +390,7 @@ mesaj3(String isim, {String soyisim, int yas}){ //Süsülü parantez ile beraber
 }
 */
 
-
+/*
 //PRATİK FONKSİYON
 main(List<String> args) {
   print(carpma(5, 4));
@@ -403,3 +403,161 @@ int carpma(int sayi1, int sayi2){
 }
 
 int pratikCarpma(int sayi1, int sayi2) => sayi1 * sayi2;
+*/
+
+/*
+//Anon functions
+main(){
+
+  var bolme = (int bolunen, int bolen) {
+    return bolunen ~/ bolen;
+  };
+
+  print(bolme(12, 3));
+
+  Function bolmek = (int bolunen, int bolen) => bolunen ~/ bolen;
+  print(bolmek(12,3));
+}
+*/
+
+/*
+  int tarih = 1453;
+
+  bilgi() {
+    String olay = "istanbul\'un Fethi";
+    print('Tarih: $tarih, Olay: $olay');
+  }
+
+  bilgi();
+
+  print('Olay: $olay');
+}
+*/
+
+/*
+// Iterable
+main(List<String> args) {
+  Iterable iterable = Iterable.generate(5);
+  print(iterable);
+
+  Iterable iterable2 = Iterable.generate(9, (eleman) {
+    print(eleman);
+    return eleman;
+  });
+
+  print(iterable2);
+}
+*/
+
+//list
+main(List<String> args) {
+  var listem = ['süt', 'elma', 'ekmek', 'su'];
+  print(listem);
+  print(listem[2]);
+  listem[2] = 'bulgur';
+  print(listem);
+
+  print('listenin toplam eleman sayısı: ${listem.length}');
+  print(listem[2].length);
+
+  //List creating
+  var listem2 = [];
+  print(listem2.length);
+
+  var Liste1 = <int>[1, 2, 3, 4, 5, 7, 8];
+  print(Liste1);
+
+  List<String> liste2 = ['Aryen'];
+  print(liste2);
+
+  //Fixed Length List
+  List<int> limited = List(5);
+  print(limited);
+  limited[2] = 2;
+  print(limited);
+
+  List<String> esyalar = [];
+  print("\nListe boş mu: ${esyalar.isEmpty}");
+  print('Liste dolu mu: ${esyalar.isNotEmpty}');
+
+  esyalar.add('koltuk');
+  esyalar.add('tablo');
+  esyalar.add('sandalye');
+
+  print('\n$esyalar');
+
+  //Cascade Notation
+  esyalar..add('Masa')..add('Yatak')..add('iskemle');
+  print(esyalar);
+
+  //Multiple cascade notation
+  esyalar..addAll(['Komodin', "Dolap", 'televizyon', "Radyo"]);
+  print(esyalar);
+
+  esyalar.remove('Masa');
+  print('\n$esyalar');
+  esyalar..remove('Yatak')..remove('Komodin')..remove('Dolap')..remove('Radyo');
+
+  print('\n$esyalar');
+  //Listedeki son elemanı çıkarmak
+  print("Son eleman: ${esyalar.removeLast()} listeden çıkarıldı...");
+  print(esyalar);
+  print("Son eleman: ${esyalar.removeLast()} listeden çıkarıldı...");
+  print(esyalar);
+
+  //Inserting inside list
+  esyalar.insert(2, 'terlik');
+  print('\n$esyalar');
+
+  esyalar.insertAll(1, ['televizyon', 'iskemle', 'dolap', 'komodin']);
+  print(esyalar);
+
+  print(esyalar.first);
+  print(esyalar.last);
+
+  print(esyalar.elementAt(1));
+  print(esyalar[1]);
+
+  //Searching in strings
+  print("listede tablo var mı: ${esyalar.contains("tablo")}");
+  print("listede tencere var mı: ${esyalar.contains("tencere")}\n");
+
+  String metin = "Ali bugün saat 10'da okula gitti.";
+  print(metin.split(" "));
+  print(metin.split(" ")[2]);
+  List<String> parcali = metin.split(" ");
+  print(parcali[3].split("'")[0]);
+
+  String yazi = parcali.join(" ");
+  print(yazi);
+
+  print("\n$esyalar");
+  esyalar.forEach((eleman) {
+    print("Listede $eleman da var.");
+  });
+
+  print(esyalar.every((eleman) {
+    return eleman[0] == 't' || eleman[0] == 'k';
+  }));
+
+  print(esyalar.every((eleman) {
+    return eleman[0] == 't' ||
+        eleman[0] == 'k' ||
+        eleman[0] == 'd' ||
+        eleman[0] == "i" ||
+        eleman[0] == 's';
+  }));
+
+  print(esyalar.any((eleman) {
+    return eleman[0] == 'k';
+  }));
+
+  List nums = [3, 5, 7, 10];
+
+  print(nums.reduce((sum, element) {
+    return element + sum;
+  }));
+
+  print("nums listesindeki ${nums.indexOf(nums[0]) }.eleman tek mi: ${nums[0].isOdd}");
+  print("nums listesindeki ${nums.indexOf(10)}.eleman çift mi: ${nums[3].isEven}");
+}
