@@ -448,7 +448,7 @@ main(List<String> args) {
   print(iterable2);
 }
 */
-
+/*
 //list
 main(List<String> args) {
   var listem = ['süt', 'elma', 'ekmek', 'su'];
@@ -560,4 +560,54 @@ main(List<String> args) {
 
   print("nums listesindeki ${nums.indexOf(nums[0]) }.eleman tek mi: ${nums[0].isOdd}");
   print("nums listesindeki ${nums.indexOf(10)}.eleman çift mi: ${nums[3].isEven}");
+}
+*/
+
+/*
+//Unmodifiable List
+import 'dart:collection';
+
+main(List<String> args) {
+  var list =List.from([3,5,6,7]);
+  print(list);
+
+  list.add(100);
+  print(list);
+
+  var unmodified = UnmodifiableListView(list);
+  //unmodified.add(999);
+  //unmodified.remove(100);
+  //unmodified[2] = 10;
+  print(unmodified);
+
+}
+*/
+
+main(List<String> args) {
+  var listem = <int>[3, 5, 7, 11, 3, 7];
+  print("Listem değişkenli liste: $listem");
+
+  var setim = listem.toSet();
+  print("setim değişkenli: set: $setim");
+
+  var numbers = Set<int>.from([3, 3, 3, 4, 5]);
+  print("numbers değişkenli set: $numbers");
+
+  var bos_set = Set<int>();
+  bos_set..add(3)..add(4)..add(3)..add(5)..add(4);
+
+  print("Bu boş set: $bos_set");
+
+  var set1 = Set<int>.from([1,2,35,6,7,10,12]);
+  var set2 = Set.from([1,2,35,7,86,99,101]);
+
+  var kesisim = set1.intersection(set2);
+  print(kesisim);
+
+  var fark = set1.difference(set2);
+  print("Set1'in set2'den farkı: $fark");
+
+  var fark2 = set2.difference(set1);
+  print("Set2'nin set1'den farkı: $fark2");
+  
 }
